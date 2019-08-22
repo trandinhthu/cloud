@@ -25,16 +25,20 @@
 </head>
 
 <body>
-    <div class="container bg-info">
+<div class="container bg-info">
         <form action="add.php" class="needs-validation" method = "POST">
-            <h1 style="text-align: center">Add Product</h1>
+            <h1 style="text-align: center">Add employee</h1>
             <div>
-                <label>Name of product</label>
+                <label>Name</label>
                 <input type="text" class="form-control nhap"  placeholder="Enter name of product" name="name" required>
             </div>
             <div>
-                <label>Price</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter price of product" name="price" required>
+                <label>Phone Number</label>
+                <input type="number" class="form-control nhap"  placeholder="Enter price of product" name="phone" required>
+            </div>
+            <div>
+                <label>Address</label>
+                <input type="number" class="form-control nhap"  placeholder="Enter price of product" name="address" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="submit">Submit</button>
         </form>
@@ -48,8 +52,9 @@
     else
     {
         $namepr = $_POST['name'];
-        $price = $_POST['price'];
-        $sql = "insert into product(namepr, price) values ('$namepr', '$price')";
+        $price = $_POST['phone'];
+        $price = $_POST['address'];
+        $sql = "insert into quanly(name, phone,address) values ('$namepr', '$phone','$address')";
         $pdo->exec($sql);
         echo 'add Sucessfully';
     }
