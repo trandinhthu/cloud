@@ -33,7 +33,7 @@
         echo "<tr>";
         echo "<td>".$row['name']."</td>";
         echo "<td>".$row['phone']."</td>"; 
-        echo "<td>".$row['adress']."</td>";   
+        echo "<td>".$row['address']."</td>";   
         echo "<td><a href=\"edit.php?id=$row[id]\">Edit</a> | <a href=\"delete.php?id=$row[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
     }
     ?>
