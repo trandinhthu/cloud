@@ -29,15 +29,16 @@
         {    
             //$id = $_POST['id'];
             $name = $_POST['name'];
-            $price = $_POST['price'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
         }
         else
         {
-            $sql = "UPDATE product SET namepr = :name, price=:price WHERE product.id=:id";
+            $sql = "UPDATE quanly SET name = :name, phone=:phone, address=:address WHERE quanly.id=:id";
             $query = $pdo->prepare($sql);
             $query->bindparam(':id', $id);
-            $query->bindparam(':name', $name);
-            $query->bindparam(':price', $price);
+            $query->bindparam(':phone', $phone);
+            $query->bindparam(':address', $address);
             $query->execute();
             if(($pdo->query($sql)) == true){
                 header("location: Manage.php");
@@ -49,14 +50,15 @@
             
         } 
             $id = $_GET['id'];
-            $sql = "SELECT * FROM product WHERE id=:id";
+            $sql = "SELECT * FROM quanly WHERE id=:id";
             $query = $pdo->prepare($sql);
             $query->execute(array(':id' => $id));
  
             while($row = $query->fetch(PDO::FETCH_ASSOC))
                 {
-                    $name = $row['namepr'];
-                    $price = $row['price'];
+                    $name = $row['name'];
+                    $phone = $row['phone'];
+                $address = $row['address']
                 }   
         ?>
     <div class="container bg-info">
@@ -69,7 +71,12 @@
             </div>
             <div>
                 <label>Price</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter price of product" value="<?php echo $price;?>" name="price" required>
+                <input type="number" class="form-control nhap"  placeholder="Enter phone number" value="<?php echo $phone;?>" name="phone" required>
+            </div>
+            
+            <div>
+                <label>Price</label>
+                <input type="number" class="form-control nhap"  placeholder="Enter address" value="<?php echo $address;?>" name="address" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="edit">Edit</button>
         </form>
