@@ -15,14 +15,12 @@
 
 <body>
     <header>
-        <p>Hi <?php echo ($_SESSION['username']); ?></p>
-        <a href="logout.php"><button class="btn btn-primary">LogOut</button></a>
     </header><br>
     <table class="table">
         <tr>
-            <th>ID</th>
-            <th>Name of product</th>
-            <th>Price</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
             <td><a href="./add.php"><button class="btn btn-primary">Add Product</button></a></td>
         </tr>
     <?php require_once "connect.php";
