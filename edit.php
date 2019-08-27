@@ -25,41 +25,16 @@
 <body>
         <?php 
         include_once "connect.php";
-        if(isset($_POST['edit']))
-        {    
-            //$id = $_POST['id'];
-            $name = $_POST['name'];
-            $phone = $_POST['phone'];
-            $address = $_POST['address'];
-        }
-        else
-        {
-            $sql = "UPDATE quanly SET name = :name, phone=:phone, address=:address WHERE quanly.id=:id";
-            $query = $pdo->prepare($sql);
-            $query->bindparam(':id', $id);
-            $query->bindparam(':phone', $phone);
-            $query->bindparam(':address', $address);
-            $query->execute();
-            if(($pdo->query($sql)) == true){
-                header("location: Manage.php");
-            }
-            else {
-                echo "error";
-                echo "$sql";
-            }
-            
-        } 
-            $id = $_GET['id'];
-            $sql = "SELECT * FROM quanly WHERE id=:id";
-            $query = $pdo->prepare($sql);
+         $id = $_GET['id'];
+            $sql1 = "Select * from product where id = :id";
+            $query = $pdo->prepare($sql1);
             $query->execute(array(':id' => $id));
- 
             while($row = $query->fetch(PDO::FETCH_ASSOC))
-                {
-                    $name = $row['name'];
-                    $phone = $row['phone'];
-                $address = $row['address']
-                }   
+            {
+                $id1 = $row['id'];
+                $namepr = $row['namepr'];
+                $price = $row['price'];
+            }
         ?>
     <div class="container bg-info">
         <form action="edit.php" class="needs-validation" method = "POST">
