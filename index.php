@@ -48,7 +48,7 @@
                     <span class="login100-form-title">
                         Login
                     </span>
-                    <form action="login.php">
+                    <form action="login.php" method="POST">
                     <div class="wrap-input100 validate-input"
                         data-validate="You must enter like this: ex@abc.xyz">
                         <input class="input100" type="text" placeholder="User" name="username" id="username">
