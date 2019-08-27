@@ -17,7 +17,6 @@
     <header>
         <p>Hi <?php echo ($_SESSION['username']); ?></p>
         <a href="logout.php"><button class="btn btn-primary">LogOut</button></a>
-        <a href="createoder.php"><button class="btn btn-primary">Create Order</button></a>
     </header><br>
     <table class="table">
         <tr>
@@ -34,7 +33,6 @@
         // $result = $stmt->fetchAll();    
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {         
         echo "<tr>";
-        echo "<td>".$row['id']."</td>";
         echo "<td>".$row['name']."</td>";
         echo "<td>".$row['phone']."</td>"; 
         echo "<td>".$row['adress']."</td>";   
