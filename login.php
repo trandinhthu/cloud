@@ -6,8 +6,8 @@
     $stmt->execute
     (
         array(
-            'usernamestore' => $_POST['username'],
-            'pass' => $_POST['pass'],
+            'usernamestore' => $_POST['user'],
+            'pass' => $_POST['mk'],
         )
     );
     $count = $stmt->rowCount();
