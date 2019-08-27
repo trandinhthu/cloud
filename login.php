@@ -2,7 +2,7 @@
     session_start();
     include_once "connect.php";
 
-    $sql = "SELECT * FROM store where usernamestore = :usernamestore and pass = :pass";
+    $sql = "SELECT * FROM account where name = :usernamestore and mk = :pass";
     $stmt = $pdo->prepare($sql);
     $stmt->execute
     (
@@ -23,7 +23,7 @@
         echo "<h1>Sai username or pass</h1>";
     }
 
-    $sql = "SELECT * FROM manage where username = :username and pass = :pass";
+    $sql = "SELECT * FROM manage where name = :username and mk = :pass";
     $stmt = $pdo->prepare($sql);
     $stmt->execute
     (
