@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include_once "connect.php";
-
+    echo "<h1>Sss</h1>"; 
     $sql = "SELECT * FROM account where name = :usernamestore and mk = :pass";
     $stmt = $pdo->prepare($sql);
     $stmt->execute
