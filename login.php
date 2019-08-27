@@ -14,6 +14,7 @@
     $count = $stmt->rowCount();
     if($count > 0)
     {   
+        echo "<h1>Sss</h1>"; 
         $_SESSION['username'] = $_POST['username'];
         header("Location: Manage.php");
         
