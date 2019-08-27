@@ -52,8 +52,8 @@
     else
     {
         $namepr = $_POST['name'];
-        $price = $_POST['phone'];
-        $price = $_POST['address'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
         $sql = "insert into quanly(name, phone,address) values ('$namepr', '$phone','$address')";
         $pdo->exec($sql);
         echo 'add Sucessfully';
