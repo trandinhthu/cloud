@@ -97,7 +97,6 @@
                      <input type="password" class="form-control" placeholder="Password" name="mk">
                   </div>
                   <button type="submit" class="btn btn-black">Login</button>
-                  <button type="submit" class="btn btn-secondary">Register</button>
                </form>
             </div>
          </div>
