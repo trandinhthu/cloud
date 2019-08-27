@@ -34,11 +34,11 @@
             </div>
             <div>
                 <label>Phone Number</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter price of product" name="phone" required>
+                <input type="text" class="form-control nhap"  placeholder="Enter name of product" name="phone" required>
             </div>
             <div>
                 <label>Address</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter price of product" name="address" required>
+                <input type="text" class="form-control nhap"  placeholder="Enter name of product" name="address" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="submit">Submit</button>
         </form>
