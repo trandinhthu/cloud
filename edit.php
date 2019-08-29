@@ -39,18 +39,18 @@
     <div class="container bg-info">
         <form action="edit.php" class="needs-validation" method = "POST">
             <input type="hidden" name="id"></<input>
-            <h1 style="text-align: center">Edit Product</h1>
+            <h1 style="text-align: center">Edit shop</h1>
             <div>
-                <label>Name of product</label>
-                <input type="text" class="form-control nhap"  placeholder="Enter name of product" name="name" value="<?php echo $name;?>" required>
+                <label>Name</label>
+                <input type="text" class="form-control nhap"  placeholder="Enter name" name="name" value="<?php echo $name;?>" required>
             </div>
             <div>
-                <label>Price</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter phone number" value="<?php echo $phone;?>" name="phone" required>
+                <label>Phone</label>
+                <input type="number" class="form-control nhap"  placeholder="Enter phone" value="<?php echo $phone;?>" name="phone" required>
             </div>
             
             <div>
-                <label>Price</label>
+                <label>Address</label>
                 <input type="number" class="form-control nhap"  placeholder="Enter address" value="<?php echo $address;?>" name="address" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="edit">Edit</button>
