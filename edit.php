@@ -51,7 +51,7 @@
             
             <div>
                 <label>Address</label>
-                <input type="number" class="form-control nhap"  placeholder="Enter address" value="<?php echo $address;?>" name="address" required>
+                <input type="text" class="form-control nhap"  placeholder="Enter address" value="<?php echo $address;?>" name="address" required>
             </div>
             <button type="submit" class="btn btn-primary" name ="edit">Edit</button>
         </form>
