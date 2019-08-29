@@ -30,7 +30,7 @@
             <h1 style="text-align: center">Add employee</h1>
             <div>
                 <label>Name</label>
-                <input type="text" class="form-control nhap"  placeholder="Enter name of product" name="name" required>
+                <input type="text" class="form-control nhap"  placeholder="Enter name" name="name" required>
             </div>
             <div>
                 <label>Phone Number</label>
