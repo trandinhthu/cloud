@@ -33,7 +33,7 @@
             {
                 $id1 = $row['id'];
                 $namepr = $row['namepr'];
-                $price = $row['price'];
+                $address = $row['address'];
             }
         ?>
     <div class="container bg-info">
