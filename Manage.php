@@ -21,7 +21,7 @@
             <th>Name</th>
             <th>Phone</th>
             <th>Address</th>
-            <td><a href="./add.php"><button class="btn btn-primary">Add Product</button></a></td>
+            <td><a href="./add.php"><button class="btn btn-primary">Add account</button></a></td>
         </tr>
     <?php require_once "connect.php";
         $sql = "select * from quanly";
