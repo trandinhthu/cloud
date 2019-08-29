@@ -1,7 +1,7 @@
 <?php 
     session_start();
     include_once "connect.php";
-    $sql = "SELECT * FROM account where name = :usernamestore and mk = :pass";
+    $sql = "SELECT * FROM quanly where name = :usernamestore and phone = :pass";
     $stmt = $pdo->prepare($sql);
     $stmt->execute
     (
